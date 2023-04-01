@@ -12,7 +12,7 @@ $students = mysqli_query($connect, 'SELECT * FROM students');
   <title>All Students</title>
 </head>
 <body>
-<a href="index.php">Add New Studemt</a>
+<a href="create-student.php">Add New Studemt</a>
 <h2>ALL STUDENTS</h2>
 
 <table>
