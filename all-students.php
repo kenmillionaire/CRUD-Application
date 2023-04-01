@@ -35,11 +35,9 @@ $students = mysqli_query($connect, 'SELECT * FROM students');
   <td><?= $student['class'] ?></td>
   <td><?= $student['hobby'] ?></td>
    <td>
-   
-   <a href="view-student.php?id=<?= $student['id'] ?>">View</a>
+      <a href="view-student.php?id=<?= $student['id'] ?>">View</a>
     <a href="edit-student.php?id=<?= $student['id'] ?>">Edit</a> 
     <a href="delete-student.php?id=<?= $student['id'] ?>">Delete</a>
-
      </td>
 </tr>
 <?php endforeach; ?>

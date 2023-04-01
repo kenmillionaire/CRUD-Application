@@ -11,7 +11,7 @@ require ("database.php");
   <title>All Students</title>
 </head>
 <body>
-<a href="all-students.php">All Student</a>
+<a href="/side_hustle/CRUD-Application/all-students.php">All Student</a>
 
 <?php
 
@@ -20,9 +20,9 @@ $student_details= mysqli_query($connect, "SELECT * FROM students WHERE id = '$id
 
            $student = mysqli_fetch_assoc($student_details);
 
-// if(!$student) {
-//   exit('Student not found!');
-// }
+if(!$student) {
+  exit('Student not found!');
+}
 
 ?>
 
