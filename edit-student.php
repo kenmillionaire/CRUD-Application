@@ -28,7 +28,7 @@ if (!$student){
   <h2>EDIT STUDENT</h2>
 
 <form action="process.php" method="post">
-<input type="hidden" value="<?php echo $id ?>" name="student_id">
+<input type="hidden" value="<?php echo $id ?>" name="id">
 
 <p>
 <label for="">Full name:</label>
@@ -64,7 +64,7 @@ if (!$student){
 </p>
 
 <p>
-<input type="submit" value="Update" name="edit_student">
+<input type="submit" value="Update" name="edit-student">
 </P>
 
 </form>
