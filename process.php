@@ -49,7 +49,22 @@ $pass = $_POST['pass'];
 $confirm_pass = $_POST['confirm_pass'];
 
 if ($pass !== $confirm_pass) {
-  echo "<p>Password do not match!</p><a href='register.php'>Go Back </a>";
+  exit ("<p>Password do not match!</p><a href='register.php'>Go Back </a>");
+}
+
+$user_exist = mysqli_query($connect, "SELECT * FROM users WHERE email = '$email'");
+
+if(mysqli_num_rows ($user_exist) > 0) {
+  exit ("<p>User already exist</p><a href='index.php'>Login</a>");
+}
+
+//md5 is used for hashing passwords
+$cryptic_pass = md5($pass);
+
+$insert_user = mysqli_query($connect, "INSERT INTO users (name,email,password) VALUES('$name', '$email', '$cryptic_pass')");
+
+if ($insert_user) {
+  header("Location: all-students.php");
 }
 }
 ?>
