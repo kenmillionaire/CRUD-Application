@@ -18,22 +18,22 @@ include "database.php";
 
 <p>
 <label for="">Name:</label>
-<input type="text"  name="user_name"><br><br>
+<input type="text"  name="user_name" required><br><br>
 </p>
 
 <p>
 <label for="">Email:</label>
-<input type="email"  name="email"><br><br>
+<input type="email"  name="email" required><br><br>
 </p>
 
 <p>
 <label for="">Password:</label>
-<input type="password"  name="pass"><br><br>
+<input type="password"  name="pass" required><br><br>
 </p>
 
 <p>
 <label for="">Confirm Password:</label>
-<input type="password"  name="confirm_pass"><br><br>
+<input type="password"  name="confirm_pass" required><br><br>
 </p>
 
 <p>
